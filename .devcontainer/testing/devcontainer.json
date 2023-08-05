@@ -1,12 +1,12 @@
 {
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.10",
   "name": "Selenium Tests",
   "dockerComposeFile": [
-      "../../compose.yaml",
-      "docker-compose.extend.yml"
+      "../../compose.yaml"
   ],
-  "service": "testing",
+  "hostRequirements": { "cpus": 2 },
+  "waitFor": "onCreateCommand",
   "shutdownAction": "stopCompose",
-  "workspaceFolder": "/workspace/",
   "forwardPorts": [4444, 5000, 7900],
   "onCreateCommand": "pip install -r test-requirements.txt",
   "postAttachCommand": "pytest",

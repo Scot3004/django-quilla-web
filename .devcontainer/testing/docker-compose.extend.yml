@@ -1,8 +1,0 @@
-version: '3'
-services:
-  testing:
-    image: mcr.microsoft.com/vscode/devcontainers/python:3.10
-    volumes:
-      # Mounts the project folder to '/workspace'. While this file is in .devcontainer,
-      # mounts are relative to the first file in the list, which is a level up.
-      - .:/workspace:cached

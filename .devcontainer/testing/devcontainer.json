@@ -1,11 +1,12 @@
 {
   "name": "Selenium Tests",
   "dockerComposeFile": [
-      "../../compose.yaml" // the docker compose file that we want to run
+      "../../compose.yaml",
+      "docker-compose.extend.yml"
   ],
-  "service": "webapp",
+  "service": "testing",
   "shutdownAction": "stopCompose",
-  "workspaceFolder": "/app/",
+  "workspaceFolder": "/workspace/",
   "forwardPorts": [4444, 5000, 7900],
   "onCreateCommand": "pip install -r test-requirements.txt",
   "postAttachCommand": "pytest",

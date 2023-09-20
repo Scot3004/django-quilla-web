@@ -1,5 +1,10 @@
 {
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "latest"
+    }
+  },
   "hostRequirements": { "cpus": 2 },
   "waitFor": "onCreateCommand",
   "onCreateCommand": "pipx install lektor && npm install",

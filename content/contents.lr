@@ -14,9 +14,9 @@ Somos una comunidad de desarrolladores web, dev-ops, emprendedores y estudiantes
 
 Entusiastas en Python y Django ¡Están invitados!	
 ----
-link: /blog/experiencia-taller-sed/
+link: /blog/primera-pycon-colombia/
 ----
-image: /blog/experiencia-taller-sed/taller-secretaria-de-educacion-baq-y-pybaq.png
+image: /blog/primera-pycon-colombia/main-img_en.png
 ----
 alt: Experiencia del taller con la secretaría de educación de Barranquilla
 #### section-block ####
@@ -72,7 +72,7 @@ source: testimonies
 #### sponsors ####
 title: NUESTROS PATROCINADORES
 ----
-source: sponsors
+role: 1-patrocinador
 ---
 show_title: no
 ---

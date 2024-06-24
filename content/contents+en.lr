@@ -10,9 +10,9 @@ We are a community of web developers, dev-ops, entrepreneurs and students.
 
 Python and Django enthusiasts are invited!
 ----
-link: /en/blog/8-anos-en-retrospectiva-python-barranquilla/
+link: /en/blog/primera-pycon-colombia/
 ----
-image: /blog/8-anos-en-retrospectiva-python-barranquilla/8-anos-python-barranquilla.png
+image: /blog/primera-pycon-colombia/main-img_en.png
 ----
 alt: First Django Girls in Barranquilla
 #### section-block ####
@@ -68,7 +68,7 @@ source: testimonies
 #### sponsors ####
 title: OUR SPONSORS
 ----
-source: sponsors
+role: 1-patrocinador
 ---
 title: Python Barranquilla
 ---

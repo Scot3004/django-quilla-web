@@ -53,7 +53,7 @@ Es muy fácil de usar, ¡ya lo veras!
 Lo primero que queremos hacer es instalar la última distribución de Python, la cual es Python 3.6.2 al momento de escribir este tutorial. Si existe una nueva versión descárgala, los siguientes pasos deberían mantenerse más o menos iguales.
 Vamos a usar Python 3 porque las librerías más importantes han sido migradas a este y porque la siguiente versión de Django 2.x no soportará Python 2.
 
-Ve a [www.python.org], haz clic en la página de descarga de Pyhton 3.6.3, baja hasta que veas los archivos de descarga listados abajo:
+Ve a www.python.org, haz clic en la página de descarga de Pyhton 3.6.3, baja hasta que veas los archivos de descarga listados abajo:
 
 ![Archivos](/img/posts/2017/guia-django-principiantes-1/files.png)
 
@@ -336,3 +336,5 @@ Traducido de https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-
 excerpt: Traducción del articulo https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-1.html
 ---
 pub_date: 2017-12-15
+---
+render_tdc: yes

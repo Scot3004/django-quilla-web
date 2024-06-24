@@ -4,7 +4,7 @@ author: paula-aragon
 ---
 body:
 
-**_Introducción_**
+## Introducción
 
 ¡Bienvenidos a la segunda parte de nuestro tutorial de Django! En la lección anterior, instalamos todo lo necesario. Ojalá, todos tengan su instalación de Python 3.6 y Django 1.11 ejecutándose dentro de un Entorno Virtual. Además, ya creamos el proyecto con el que estaremos jugando. En esta lección, vamos a continuar escribiendo código en este mismo proyecto.
 
@@ -12,7 +12,7 @@ En la próxima sección, vamos a hablar un poco acerca del proyecto que vamos a 
 
 ¡Manos a la obra!
 
-**_Proyecto web de tableros_**
+## Proyecto web de tableros
 
 No sé tú, pero personalmente, aprendo mucho más viendo ejemplos prácticos y fragmentos de código. Para mí, es difícil procesar un concepto donde por ejemplo se lee Clase A y Clase B, o cuando veo el clásico ejemplo foo(bar).
 
@@ -24,7 +24,7 @@ Pero si eres novato en el desarrollo web, te recomiendo que continúes leyendo. 
 
 ![](/img/posts/2020/guia-django-principiantes-2/Diapositiva2.jpg)
 
-**_Diagrama de casos de uso_**
+### Diagrama de casos de uso
 
 Nuestro proyecto es un tablero de discusión (un foro). La idea es mantener varios tableros, los cuales se comportarán como categorías.
 
@@ -34,7 +34,7 @@ Necesitaremos una forma de diferenciar un usuario regular de un usuario administ
 
 ![Figura 1: Casos de uso](/img/posts/2020/guia-django-principiantes-2/Diapositiva3.jpg)
 
-**_Diagrama de clases_**
+### Diagrama de clases
 
 Desde el diagrama de casos de uso, podemos empezar a pensar acerca de las entidades de nuestro proyecto. Las entidades son los modelos que crearemos, y están muy relacionados con la información que nuestra aplicación Django procesará.
 
@@ -90,7 +90,7 @@ Otra cosa interesante es que en el modelo Tema tenemos ahora una operación (un 
 
 ¡Suficiente UML por ahora! Para dibujar los diagramas presentes en esta sección utilicé la herramienta StarUML.
 
-**_Wireframes_**
+### Wireframes
 
 Despues de invertir tiempo diseñando los modelos de la aplicación, me gusta crear algunos wireframes para definir qué se debe hacer y también tener una vista clara de hacia dónde vamos.
 
@@ -121,7 +121,7 @@ Si el usuario hace click en botón de Responder, verán la siguiente pantalla, c
 
 Para dibujar tus wireframes puedes usar la herramienta draw.io, es gratis.
 
-**_Modelos_**
+## Modelos
 
 Los modelos son básicamente una representación de la base de datos de tu aplicación. Lo que vamos a hacer en esta sección es crear la representación en Django de las clases que modelamos en la sección anterior: Tablero, Tema y Entrada. El modelo Usuario ya está definido en la aplicación incorporada llamada auth, la cual es listada en nuestra configuración INSTALLED_APPS bajo el nombre de django.contrib.auth.
 
@@ -175,7 +175,7 @@ Debajo puedes ver la comparación entre el diagrama de clases y el código fuent
 
 A este punto, puede que te estés preguntando: “¿Qué pasa con las llaves primarias/IDs?”, si no especificamos una llave primaria para un modelo. Django lo creará automáticamente. En las próximas secciones, se explicará mejor cómo funciona.
 
-**_Migración de modelos_**
+### Migración de modelos
 
 El siguiente paso es decirle a Django que cree la base de datos para empezar a usarla.
 
@@ -242,7 +242,7 @@ Eso es todo! Nuestra base de datos está lista para usar.
 
 ![](/img/posts/2020/guia-django-principiantes-2/Diapositiva18.jpg)
 
-**_Experimentando con API de Modelos_**
+### Experimentando con API de Modelos
 
 Una de las grandes ventajas de desarrollar con Python es la consola interactiva. La uso todo el tiempo. Es una forma rápida de probar cosas y experimentar con bibliotecas y APIs.
 
@@ -406,7 +406,7 @@ Board.objects.get(name='django')
 boards.models.DoesNotExist: Board matching query does not exist.
 ```
 
-**_Resumen de las operaciones de Modelos_**
+### Resumen de las operaciones de Modelos
 
 A continuación figura un resumen de los métodos y operaciones que aprendimos en esta sección, utilizando el modelo Tablero como referencia. Board en mayúsculas se refiere a la clase, board en minúsculas se refiere a una instancia (u objeto) de la clase del modelo Board:
 
@@ -420,7 +420,7 @@ A continuación figura un resumen de los métodos y operaciones que aprendimos e
 
 En la siguiente sección, vamos a empezar a escribir vistas y a mostrar nuestros tableros en páginas HTML.
 
-**_Vistas, plantillas y archivos estáticos_**
+## Vistas, plantillas y archivos estáticos
 
 Por el momento ya tenemos una vista llamada Home que muestra "¡Hola, Mundo!" en la página principal de nuestra aplicación.
 
@@ -475,7 +475,7 @@ Y el resultado sería esta sencilla página HTML:
 
 Pero hagamos una pausa aquí. No vamos a ir muy lejos renderizando el HTML de esta manera. Para esta simple vista, todo lo que necesitamos es una lista de tableros; luego la parte de renderizado es un trabajo para el Motor de Plantillas Django.
 
-**_Configuración del motor de plantillas de Django_**
+### Configuración del motor de plantillas de Django
 
 Crea una nueva carpeta llamada templates (plantillas) al mismo nivel que las carpetas boards y mysite:
 
@@ -607,7 +607,7 @@ Podemos mejorar la plantilla HTML usando una tabla:
 
 ![](/img/posts/2020/guia-django-principiantes-2/Diapositiva21.jpg)
 
-**_Probando la pantalla principal_**
+### Probando la pantalla principal
 
 ![](/img/posts/2020/guia-django-principiantes-2/Diapositiva22.jpg)
 Este va a ser un tema recurrente, y vamos a explorar juntos diferentes conceptos y estrategias a lo largo de toda la serie de tutoriales.
@@ -736,7 +736,7 @@ Destroying test database for alias 'default' ('file:memorydb_default?mode=memory
 
 La verbosidad determina la cantidad de información de notificación y depuración que se imprimirá en la consola; 0 es sin salida, 1 es salida normal y 2 es salida detallada.
 
-**_Configuración de archivos estáticos_**
+### Configuración de archivos estáticos
 
 Los archivos estáticos son el CSS, JavaScripts, Fuentes, Imágenes, o cualquier otro recurso que podamos usar para componer la interfaz de usuario.
 
@@ -871,7 +871,7 @@ El resultado ahora:
 
 Hasta ahora estamos agregando nuevos tableros usando la consola interactiva (python manage.py shell). Pero necesitamos una mejor manera de hacerlo. En la siguiente sección, vamos a implementar una interfaz de administración para que el administrador del sitio web los gestione.
 
-**_Introducción a Django Admin_**
+## Introducción a Django Admin
 
 Cuando empezamos un nuevo proyecto, Django viene configurado con Django Admin en la lista de INSTALLED_APPS.
 
@@ -935,7 +935,7 @@ Click en el botón Guardar:
 
 Podemos comprobar si todo funciona abriendo la url http://127.0.0.1:8000
 
-**_Conclusiones_**
+## Conclusiones
 
 En este tutorial, exploramos muchos conceptos. Definimos algunos requerimientos de nuestro proyecto, creamos los primeros modelos, migramos la base de datos, comenzamos a jugar con Models API. Creamos nuestra primera vista y escribimos algunas pruebas unitarias. También configuramos el motor de plantillas de Django, archivos estáticos, agregamos la librería de Bootstrap 4 al proyecto. Finalmente, tuvimos una breve introducción a la interfaz de Django Admin.
 
@@ -945,3 +945,5 @@ _Traducido de https://simpleisbetterthancomplex.com/series/2017/09/11/a-complete
 pub_date: 2020-07-14
 ---
 excerpt: Traducción del articulo https://simpleisbetterthancomplex.com/series/2017/09/04/a-complete-beginners-guide-to-django-part-2.html
+---
+render_tdc: yes

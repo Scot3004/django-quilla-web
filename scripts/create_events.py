@@ -44,9 +44,9 @@ def transform_event(event_node: dict):
     content["date_start"] = event['dateTime']
     content["link"] = event["eventUrl"]
     content["information"] = event["description"]
-    if(event["featuredEventPhoto"]):
+    if event["featuredEventPhoto"]:
         content["featured_photo"] = event["featuredEventPhoto"]["standardUrl"]
-    if(event["venues"] and len(event["venues"])>0):
+    if event["venues"] and len(event["venues"])>0:
         content["venue"] = event["venues"][0]["name"]
         content["address_1"] = event["venues"][0]["address"]
     return content
@@ -87,5 +87,8 @@ def load_events(event_list):
 
 if __name__ == "__main__":
     event_data = extract_meetup_json("databags/meetup_gql.json")
-    transformed_events = [transform_event(event) for event in event_data["data"]["groupByUrlname"]["past_events"]["edges"]]
+    transformed_events = [
+        transform_event(event)
+        for event in event_data["data"]["groupByUrlname"]["past_events"]["edges"]
+    ]
     load_events(transformed_events)

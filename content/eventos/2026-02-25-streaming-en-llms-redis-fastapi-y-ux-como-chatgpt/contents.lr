@@ -1,0 +1,35 @@
+title: Streaming en LLMs: Redis, FastAPI y UX como ChatGPT
+---
+date_start: 2026-02-25 19:00
+---
+link: https://www.meetup.com/pythonbaq/events/313448598/
+---
+information: **\*\*\* Recordatorio:\*\*\*** Para el ingreso a la Universidad Libre será obligatorio diligenciar el siguiente formulario:
+
+[https://forms.gle/s1V2dEzdDdSwfaDp7](https://forms.gle/s1V2dEzdDdSwfaDp7)
+
+**Streaming en LLMs: Redis, FastAPI y UX como ChatGPT**
+**Nivel:** Intermedio / Avanzado
+Aprenderemos cómo implementar una experiencia de usuario fluida mediante el streaming de respuestas de modelos de lenguaje (LLMs). Veremos cómo integrar FastAPI para el backend, el uso de Redis para la gestión de estados o caché, y cómo replicar la latencia mínima que caracteriza a interfaces como ChatGPT.
+**Ponente:** Sergio Mancilla
+**Agenda:**
+
+* 7:00 pm – Ingreso al salon.
+* 7:30-8:15 – Charla.
+* 8:15-8:40 – Q&A y Anuncios de la comunidad
+* 8:40-9:00 – Networking
+
+**Adicionales:**
+
+* El evento será presencial en la Universidad Libre. Salón: Auditorio piso 7.
+* Para el ingreso a la universidad será obligatorio diligenciar el siguiente formulario: [https://forms.gle/s1V2dEzdDdSwfaDp7](https://forms.gle/s1V2dEzdDdSwfaDp7)
+* El formulario cierra el dían antes del evento a las 4:00pm.
+* Favor ser puntuales
+* Se transmitirá por el canal de youtube de Python Colombia
+* https://www.youtube.com/watch?v=lrKalSlVanc
+---
+featured_photo: https://secure.meetupstatic.com/photos/event/6/c/3/7/600_532827703.jpeg
+---
+venue: Universidad Libre
+---
+address_1: cra 46 # 48 Nte. Centro Histórico

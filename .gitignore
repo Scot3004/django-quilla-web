@@ -11,3 +11,4 @@ geckodriver.log
 screenshots
 private_key.pem
 public_key.pem
+test-results

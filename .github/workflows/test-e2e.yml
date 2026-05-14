@@ -6,11 +6,12 @@ on:
       browser:
         description: 'Browser to run tests'
         required: true
-        default: chrome
+        default: chromium
         type: choice
         options:
         - firefox
-        - chrome
+        - chromium
+        - webkit
 
 env:
   TEST_BROWSER: ${{ github.event.inputs.browser }}
@@ -29,7 +30,7 @@ jobs:
       - name: Run tests (pytest)
         run: |
           mkdir -p screenshots
-          pytest --tracing=retain-on-failure
+          pytest --tracing=retain-on-failure --browser=${{ env.TEST_BROWSER }}
 
       - name: Upload screenshots
         if: always()

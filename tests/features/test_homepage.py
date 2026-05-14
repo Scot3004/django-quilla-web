@@ -1,27 +1,13 @@
-"""Test de homepage usando screenpy con el patron screenplay"""
-from typing import Generator
-import pytest
-from screenpy import Actor, then, when
-from screenpy.actions import See
-from screenpy.pacing import act, scene
-from screenpy.resolutions import ReadsExactly
-from screenpy_selenium.abilities import BrowseTheWeb
-from screenpy_selenium.actions import Open, SaveScreenshot
-from screenpy_selenium.questions import TheText, BrowserTitle
-from ..ui.homepage import MAIN_HEADING
+"""Test de homepage usando Playwright (reemplazo de ScreenPy/Selenium)."""
 
-@pytest.fixture(scope="function", name="yuli")
-def fixture_actor(driver) -> Generator:
-    """Creamos el actor que vamos a usar en nuestros tests!"""
-    the_actor = Actor.named("Yuli").who_can(BrowseTheWeb.using(driver))
-    yield the_actor
-    the_actor.exit_stage_left()
+def test_homepage_title(page):
+    """Verificamos que en homepage se pueda ver Python Barranquilla usando Playwright.
 
-@act("Homepage")
-@scene("Puede ver Python barranquilla")
-def test_homepage_title(yuli: Actor, base_url) -> None:
-    """Verificamos que en homepage se pueda ver python barranquilla"""
-    when(yuli).was_able_to(Open.their_browser_on(base_url))
-    when(yuli).attempts_to(SaveScreenshot("screenshots/homepage.png"))
-    then(yuli).should(See.the(BrowserTitle(), ReadsExactly("Python Barranquilla")))
-    then(yuli).should(See.the(TheText.of_the(MAIN_HEADING), ReadsExactly("Python Barranquilla.")))
+    Navegamos a la raíz `/` y confiamos en que `pytest-playwright` haya
+    configurado `base_url` para resolverla automáticamente.
+    """
+    page.goto("/")
+    # guardar captura de pantalla similar a SaveScreenshot
+    page.screenshot(path="screenshots/homepage.png", full_page=True)
+    assert page.title() == "Python Barranquilla"
+    assert page.get_by_role("heading", level=1).inner_text().strip() == "Python Barranquilla."
